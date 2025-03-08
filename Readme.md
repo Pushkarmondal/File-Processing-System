@@ -1,7 +1,7 @@
-# Cloud-Based File Processing System (Using Localstack)
+# Cloud-Based File Processing System
 
 ## Overview
-This project implements a cloud-based file processing system that ingests CSV files, extracts metadata, and stores the extracted information in DynamoDB. The system uses Localstack to simulate AWS services locally.
+This project implements a cloud-based file processing system that ingests CSV files, extracts metadata, and stores the extracted information in DynamoDB. 
 
 ## Architecture Diagram
 ![Workflow Diagram](https://raw.githubusercontent.com/Pushkarmondal/File-Processing-System/main/Screenshot%202025-03-08%20at%2008.50.00.png)
@@ -15,7 +15,6 @@ This project implements a cloud-based file processing system that ingests CSV fi
 - Logs events using CloudWatch
 
 ## Prerequisites
-- Docker installed (for Localstack)
 - AWS CLI installed
 - Python (for Lambda function development)
 - Boto3 (AWS SDK for Python): `pip install boto3`
@@ -131,11 +130,8 @@ def lambda_handler(event, context):
 ### Step 5: Testing
 1. Upload a CSV file to S3.
 2. Verify logs in CloudWatch.
-3. Check metadata stored in DynamoDB.
+3. Check the metadata stored in DynamoDB.
 
 ## Conclusion
-This project demonstrates a serverless file processing pipeline using AWS services. By using Localstack, you can test AWS services locally before deploying to a real AWS environment.
-
-## License
-This project is licensed under the MIT License.
+This project demonstrates a serverless file-processing pipeline using AWS services.
 
