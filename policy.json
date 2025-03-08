@@ -1,0 +1,49 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:CreateBucket",
+        "s3:ListAllMyBuckets",
+        "s3:ListBucket",
+        "s3:PutObject",
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::event-driven-project-bucket-csv",
+        "arn:aws:s3:::event-driven-project-bucket-csv/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "lambda:CreateFunction",
+        "lambda:InvokeFunction",
+        "lambda:ListFunctions"
+      ],
+      "Resource": "arn:aws:lambda:us-east-1:881490134829:function:MyS3ProcessorLambda"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:CreateTable",
+        "dynamodb:ListTables",
+        "dynamodb:PutItem",
+        "dynamodb:GetItem",
+        "dynamodb:DescribeTable",
+        "dynamodb:Scan"
+      ],
+      "Resource": "arn:aws:dynamodb:us-east-1:881490134829:table/event_data"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:us-east-1:881490134829:*"
+    }
+  ]
+}
