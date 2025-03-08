@@ -4,7 +4,8 @@
 This project implements a cloud-based file processing system that ingests CSV files, extracts metadata, and stores the extracted information in DynamoDB. The system uses Localstack to simulate AWS services locally.
 
 ## Architecture Diagram
-![Workflow Diagram](Screenshot 2025-03-08 at 08.50.00.png)
+![Workflow Diagram](https://raw.githubusercontent.com/Pushkarmondal/File-Processing-System/main/Screenshot%202025-03-08%20at%2008.50.00.png)
+
 
 ## Features
 - Uploads CSV files to an S3 bucket
